@@ -426,7 +426,7 @@ static int elan_setup_cdev(struct elan_data *fp)
 	fp->elan_dev.minor = MISC_DYNAMIC_MINOR;
 	fp->elan_dev.name = "elan_fp";
 	fp->elan_dev.fops = &elan_fops;
-	fp->elan_dev.mode = S_IFREG|S_IRWXUGO; 
+//	fp->elan_dev.mode = S_IFREG|S_IRWXUGO; 
 	if (misc_register(&fp->elan_dev) < 0) {
   		ELAN_DEBUG("misc_register failed\n");
 		return -1;		
